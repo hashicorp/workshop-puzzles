@@ -7,7 +7,7 @@ Wake up, Neo...
 ```
 
 ### Background
-You're working a boring job at the MetaCortex software company. While sitting in your cubicle and writing terraform code you receive a message on your terminal:
+👨🏻‍💻 You're working a boring job at the MetaCortex software company. While sitting in your cubicle and writing terraform code you receive a message on your terminal:
 
 ```
 Install the cmatrix program using **local_exec** and wait for your next instruction...

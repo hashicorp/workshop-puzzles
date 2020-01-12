@@ -5,7 +5,7 @@
 ![](../images/mars_colony.png)
 
 ### Background
-It's 2120 and the Mars Colony project is progressing nicely. As a senior sysadmin working out of Mariner Valley your job is to provision fuel supplies for the various colonies and bases.
+👩🏽‍🚀 It's 2120 and the Mars Colony project is progressing nicely. As a senior sysadmin working out of Mariner Valley your job is to provision fuel supplies for the various colonies and bases.
 
 In this challenge you'll bring external data sources into your terraform run.
 

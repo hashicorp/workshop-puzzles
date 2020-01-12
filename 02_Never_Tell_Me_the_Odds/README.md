@@ -15,7 +15,7 @@ Use the [random integer](https://www.terraform.io/docs/providers/random/r/intege
 
 ### Extra Challenges
 #### Load the Dice
-Your boss has asked you to rig some of the casino machines where you are provisioning resources. Rig the d6 resource you created in the first challenge so it rolls a 1 every single time.
+🎲 Your boss has asked you to rig some of the casino machines where you are provisioning resources. Rig the d6 resource you created in the first challenge so it rolls a 1 every single time.
 
 #### Roll for Initiative
 One of the new games needs a 20-sided dice simulator. Create another resource that creates random numbers between 1 and 20. You can name this one `d20`.

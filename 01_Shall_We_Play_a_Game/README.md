@@ -5,7 +5,7 @@
 ![How about a nice game of chess?](../images/tic-tac-toe.jpg)
 
 ### Background
-You're working at a high security government facility. Due to a recent security breach you need to customize the login banner on the mainframe, also known as the WOPR.
+🚀 You're working at a high security government facility. Due to a recent security breach you need to customize the login banner on the mainframe, also known as the WOPR.
 
 In this challenge you'll use the [local_file](https://www.terraform.io/docs/providers/local/r/file.html) resource to render a new **/etc/motd** (Message of the Day) file.
 
