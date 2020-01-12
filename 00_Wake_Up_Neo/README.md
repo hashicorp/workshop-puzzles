@@ -20,7 +20,7 @@ No special setup is required, all you need is terraform and internet access.
 Create a file called `main.tf` and write terraform code that installs the **cmatrix** package. On Ubuntu systems you can use the following command to get it installed:
 
 ```
-sudo apt -y install cmatrix
+DEBIAN_FRONTEND=noninteractive sudo apt -y install cmatrix
 ```
 
 HINT: You can utilize the [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to park your **local_exec** provisioner in.
