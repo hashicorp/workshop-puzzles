@@ -14,15 +14,20 @@ Install the cmatrix program using **local_exec** and wait for your next instruct
 ```
 
 ### Setup
-No special setup is required, all you need is terraform and internet access.
+Before you begin this challenge please run the following commands to set up your keyboard configuration.
+
+```
+apt -y install debconf-utils keyboard-configuration
+dpkg-reconfigure keyboard-configuration
+```
 
 ### The Challenge
 Create a file called `main.tf` and write terraform code that installs the **cmatrix** package. On Ubuntu systems you can use the following command to get it installed:
 
 ```
-DEBIAN_FRONTEND=noninteractive sudo apt -y install cmatrix
+sudo apt -y install cmatrix
 ```
 
 HINT: You can utilize the [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to park your **local_exec** provisioner in.
 
-Run the **cmatrix** program and see what happens.
+Run the **cmatrix** program and see what happens. You can press the q key to exit the program.

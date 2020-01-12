@@ -13,6 +13,12 @@ For this challenge all you need is terraform and the **random** provider.
 ### Main Challenge
 Use a [random integer](https://www.terraform.io/docs/providers/random/r/integer.html) resource along with a [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to generate a random number between 1 and 6. You can use a [local exec](https://www.terraform.io/docs/provisioners/local-exec.html) provisioner inside your null resource to echo out the dice roll results. Name your **random_integer** resource `d6`.
 
+You can test your work with the following one-liner, which will destroy and "re-roll the dice" for you.
+
+```
+terraform destroy -auto-approve; terraform apply -auto-approve
+```
+
 ### Extra Challenges
 #### Load the Dice
 🎲 Your boss has asked you to rig some of the casino machines where you are provisioning resources. Rig the d6 resource you created in the first challenge so it rolls a 1 every single time.
