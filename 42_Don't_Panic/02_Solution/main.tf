@@ -7,7 +7,7 @@ variable "nasa_api_key" {
 
 # Your external program needs to speak JSON. JSON inputs come from the query, and the expected result should also be JSON.
 data "external" "nasa" {
-  program = ["bash", "contact.sh"]
+  program = ["bash", "mars_weather.sh"]
 
   query = {
     api_key = "${var.nasa_api_key}"

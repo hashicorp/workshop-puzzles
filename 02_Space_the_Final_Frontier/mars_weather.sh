@@ -10,6 +10,7 @@ function error_exit() {
 
 function check_deps() {
   test -f $(which jq) || error_exit "jq command not detected in path, please install it"
+  test -f $(which bc) || error_exit "bc command not detected in path, please install it"
 }
 
 function parse_input() {
