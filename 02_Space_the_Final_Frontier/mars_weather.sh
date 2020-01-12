@@ -1,5 +1,6 @@
 #!/bin/bash
 # Sample script for fetching weather from the NASA API
+# Get your NASA API key here: https://api.nasa.gov/
 # Outputs the most recent Sol's minimum and maximum temperature in Fahrenheit.
 
 function error_exit() {
@@ -19,12 +20,12 @@ function parse_input() {
 function get_weather() {
   curl "https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0" > /tmp/mars_weather.json
 
-  # The API provides the most recent 7 days of weather.
+  # The API provides the last 7 days of weather data.
   # Array position 6 is the most recent one.
   MIN=$(jq '[.[] ] | .[6].AT.mn' /tmp/mars_weather.json)
   MAX=$(jq '[.[] ] | .[6].AT.mx' /tmp/mars_weather.json)
 
-  # Convert from Celsius to Fahrenheit
+  # Convert from Celsius to Fahrenheit.
   MIN_F=$(printf %.0f $(echo "scale=2;((9/5) * $MIN) + 32" |bc))
   MAX_F=$(printf %.0f $(echo "scale=2;((9/5) * $MAX) + 32" |bc))
 
