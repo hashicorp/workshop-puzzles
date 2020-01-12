@@ -21,4 +21,4 @@ Your boss has asked you to rig some of the casino machines where you are provisi
 One of the new games needs a 20-sided dice simulator. Create another resource that creates random numbers between 1 and 20. You can name this one `d20`.
 
 #### Critical Hit!
-The die that rolls the same number every time is easy to detect. Create another one that rolls a 20 one out of every five rolls or 20% of the time.
+The die that rolls the same number every time is easy to detect. Create another one that rolls a 20 one out of every five rolls or 20% of the time. You'll need to use a [conditional expression](https://www.terraform.io/docs/configuration/expressions.html#conditional-expressions) to solve this one.
