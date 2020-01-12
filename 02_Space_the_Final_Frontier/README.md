@@ -1,4 +1,4 @@
-# Terraform Puzzle #3
+# Terraform Puzzle #2
 ## Space - The Final Frontier
 **Challenge Level: Advanced**
 
