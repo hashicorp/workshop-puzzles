@@ -8,10 +8,10 @@
 You're working for the devops team at a large casino. You need to generate some random numbers that simulate rolling dice.
 
 ### Setup
-For this challenge all you need is terraform and the **random_integer** provider.
+For this challenge all you need is terraform and the **random** provider.
 
 ### Main Challenge
-Use the [random integer](https://www.terraform.io/docs/providers/random/r/integer.html) provider along with a [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to generate a random number between 1 and 6. You can use a **local_exec** provisioner to echo out the dice roll results. Name your **random_integer** resource `d6`.
+Use a [random integer](https://www.terraform.io/docs/providers/random/r/integer.html) resource along with a [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to generate a random number between 1 and 6. You can use a [local exec](https://www.terraform.io/docs/provisioners/local-exec.html) provisioner inside your null resource to echo out the dice roll results. Name your **random_integer** resource `d6`.
 
 ### Extra Challenges
 #### Load the Dice
