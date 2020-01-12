@@ -1,33 +1,37 @@
-# Example terraform code for fetching external data from an API, and making it usable by terraform resources and outputs.
-
-# You can set this variable by using a terraform.tfvars file or exporting the TF_VAR_nasa_api_key variable in your shell.
-variable "nasa_api_key" {
-  description = "Get your free NASA API here: https://api.nasa.gov/"
+# This is our six-sided die
+resource "random_integer" "d6" {
+  min = 1
+  max = 6
+  # Experiment with different seeds until you get the number you want.
+  # seed = 1
 }
 
-# Your external program needs to speak JSON. JSON inputs come from the query, and the expected result should also be JSON.
-data "external" "nasa" {
-  program = ["bash", "mars_weather.sh"]
-
-  query = {
-    api_key = "${var.nasa_api_key}"
-  }
+# A 20 sided die. Don't roll a 1!
+resource "random_integer" "d20" {
+  min = 1
+  max = 20
 }
 
-# We're using a null resource here but you can use the external data anywhere in your Terraform.
-resource "null_resource" "weather_report" {
+# 20% chance of something....
+resource "random_integer" "one-in-five" {
+  min = 1
+  max = 5
+}
+
+# Rolls the d6 and reports the result.
+resource "null_resource" "roll-1d6" {
   provisioner "local-exec" {
     command = <<EOT
-      echo "The low temperature at Elysium Plantia is: ${data.external.nasa.result.min_temp_f}"
-      echo "The high temperature at Elysium Plantia is: ${data.external.nasa.result.max_temp_f}"
+      echo "Your roll is: ${random_integer.d6.result}"
     EOT
   }
 }
 
-# Output the values we got from the external API.
-output "min_temp_f" {
-  value = "Elysium Plantia low temp: ${data.external.nasa.result.min_temp_f}°F"
-}
-output "max_temp_f" {
-  value = "Elysium Plantia high temp: ${data.external.nasa.result.max_temp_f}°F"
+# Rolls the d20 and reports the result.
+resource "null_resource" "roll-1d20" {
+  provisioner "local-exec" {
+    command = "echo Your roll is: ${random_integer.d20.result}"
+    # Uncomment the below line to rig the dice
+    # command = (random_integer.one-in-five.result == 1 ? "echo Your roll is: 20" : "echo Your roll is: ${random_integer.d20.result}")
+  }
 }

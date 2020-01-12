@@ -1,4 +1,4 @@
-# Terraform Puzzle #1
+# Terraform Puzzle #2
 ## Never Tell Me The Odds
 **Challenge Level: Intermediate**
 
