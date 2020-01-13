@@ -18,16 +18,16 @@ data "external" "nasa" {
 resource "null_resource" "weather_report" {
   provisioner "local-exec" {
     command = <<EOT
-      echo "The low temperature at Elysium Plantia is: ${data.external.nasa.result.min_temp_f}"
-      echo "The high temperature at Elysium Plantia is: ${data.external.nasa.result.max_temp_f}"
+      echo "The low temperature at Elysium Planitia is: ${data.external.nasa.result.min_temp_f}"
+      echo "The high temperature at Elysium Planitia is: ${data.external.nasa.result.max_temp_f}"
     EOT
   }
 }
 
 # Output the values we got from the external API.
 output "min_temp_f" {
-  value = "Elysium Plantia low temp: ${data.external.nasa.result.min_temp_f}°F"
+  value = "Elysium Planitia low temp: ${data.external.nasa.result.min_temp_f}°F"
 }
 output "max_temp_f" {
-  value = "Elysium Plantia high temp: ${data.external.nasa.result.max_temp_f}°F"
+  value = "Elysium Planitia high temp: ${data.external.nasa.result.max_temp_f}°F"
 }
