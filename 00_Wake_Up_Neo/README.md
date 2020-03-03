@@ -28,6 +28,6 @@ Create a file called `main.tf` and write terraform code that installs the **cmat
 sudo apt -y install cmatrix
 ```
 
-HINT: You can utilize the [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to park your **local_exec** provisioner in.
+HINT: You can utilize the [null resource](https://www.terraform.io/docs/provisioners/null_resource.html) to park your **local-exec** provisioner in.
 
 Run the **cmatrix** program and see what happens. You can press the q key to exit the program.
