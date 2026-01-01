@@ -1,3 +1,6 @@
+# Copyright IBM Corp. 2020, 2023
+# SPDX-License-Identifier: Apache-2.0
+
 # Example terraform code for using the HTTP data source
 # HTTP data sources work with SSL, but do not support authentication
 # Make sure you own or trust the server you're getting data from.
