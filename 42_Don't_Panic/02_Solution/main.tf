@@ -1,3 +1,6 @@
+# Copyright IBM Corp. 2020, 2023
+# SPDX-License-Identifier: Apache-2.0
+
 # This is our six-sided die
 resource "random_integer" "d6" {
   min = 1

@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright IBM Corp. 2020, 2023
+# SPDX-License-Identifier: Apache-2.0
+
 # Sample script for fetching weather from the NASA API
 # Get your NASA API key here: https://api.nasa.gov/
 # Outputs the most recent Sol's minimum and maximum temperature in Fahrenheit.

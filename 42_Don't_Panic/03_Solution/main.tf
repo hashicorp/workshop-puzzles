@@ -1,3 +1,6 @@
+# Copyright IBM Corp. 2020, 2023
+# SPDX-License-Identifier: Apache-2.0
+
 # Example terraform code for fetching external data from an API, and making it usable by terraform resources and outputs.
 
 # You can set this variable by using a terraform.tfvars file or exporting the TF_VAR_nasa_api_key variable in your shell.
