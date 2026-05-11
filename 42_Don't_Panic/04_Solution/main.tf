@@ -1,4 +1,4 @@
-# Copyright IBM Corp. 2020, 2023
+# Copyright IBM Corp. 2020, 2026
 # SPDX-License-Identifier: Apache-2.0
 
 # Example terraform code for using the HTTP data source
